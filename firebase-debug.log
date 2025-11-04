@@ -1,0 +1,47 @@
+[debug] [2025-11-03T23:10:02.428Z] ----------------------------------------------------------------------
+[debug] [2025-11-03T23:10:02.431Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-11-03T23:10:02.432Z] CLI Version:   14.23.0
+[debug] [2025-11-03T23:10:02.432Z] Platform:      win32
+[debug] [2025-11-03T23:10:02.432Z] Node Version:  v22.14.0
+[debug] [2025-11-03T23:10:02.433Z] Time:          Mon Nov 03 2025 17:10:02 GMT-0600 (hora estándar central)
+[debug] [2025-11-03T23:10:02.433Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-03T23:10:02.697Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-03T23:10:02.698Z] > authorizing via signed-in user (yahir.ramirez23@gmail.com)
+[debug] [2025-11-03T23:10:02.698Z] [iam] checking project rick-and-morty-b4a36 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-11-03T23:10:02.699Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:02.700Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:02.701Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rick-and-morty-b4a36:testIamPermissions [none]
+[debug] [2025-11-03T23:10:02.701Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rick-and-morty-b4a36:testIamPermissions x-goog-quota-user=projects/rick-and-morty-b4a36
+[debug] [2025-11-03T23:10:02.701Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rick-and-morty-b4a36:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-03T23:10:03.159Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rick-and-morty-b4a36:testIamPermissions 200
+[debug] [2025-11-03T23:10:03.160Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rick-and-morty-b4a36:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-03T23:10:03.160Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:03.160Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:03.160Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rick-and-morty-b4a36 [none]
+[debug] [2025-11-03T23:10:03.418Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rick-and-morty-b4a36 200
+[debug] [2025-11-03T23:10:03.419Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rick-and-morty-b4a36 {"projectId":"rick-and-morty-b4a36","projectNumber":"647043646127","displayName":"rick-and-morty","name":"projects/rick-and-morty-b4a36","resources":{"hostingSite":"rick-and-morty-b4a36"},"state":"ACTIVE","etag":"1_f7526187-0d34-4a63-ac38-3e89e1c5504b"}
+[info] 
+[info] === Deploying to 'rick-and-morty-b4a36'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-11-03T23:10:03.427Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:03.427Z] Checked if tokens are valid: true, expires at: 1762214886271
+[debug] [2025-11-03T23:10:03.427Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rick-and-morty-b4a36/versions [none]
+[debug] [2025-11-03T23:10:03.427Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rick-and-morty-b4a36/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-11-03T23:10:04.050Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rick-and-morty-b4a36/versions 500
+[debug] [2025-11-03T23:10:04.051Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rick-and-morty-b4a36/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rick-and-morty-b4a36/versions had HTTP Error: 500, Internal error encountered.
+[debug] [2025-11-03T23:10:04.056Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}

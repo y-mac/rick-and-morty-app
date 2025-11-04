@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useProductsApi from '../../../hooks/useProductsApi';
 
 const ProductsPage: React.FC = () => {
@@ -35,7 +36,11 @@ const ProductsPage: React.FC = () => {
             color: 'white'
           }}>
             <img src={product.image} alt={product.title} style={{ maxWidth: '100px', maxHeight: '100px', objectFit: 'contain', margin: '0 auto 10px auto' }} />
-            <h3 style={{ fontSize: '1em', marginBottom: '5px' }}>{product.title}</h3>
+            <h3 style={{ fontSize: '1em', marginBottom: '5px' }}>
+              <Link to={`/products/${product.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                {product.title}
+              </Link>
+            </h3>
             <p style={{ fontWeight: 'bold', color: '#333' }}>${product.price.toFixed(2)}</p>
             {/* Optionally display more details or a link to a product detail page */}
           </div>
